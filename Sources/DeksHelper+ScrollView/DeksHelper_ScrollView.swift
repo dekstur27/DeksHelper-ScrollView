@@ -22,7 +22,7 @@ public extension UIScrollView {
         static let unknown = State(rawValue: 1 << 10)
     }
     
-    func state() -> State {
+    var state: State {
         if self.isBouncingTop() {
             return .bouncingTop
         } else if self.isBouncingBottom() {
